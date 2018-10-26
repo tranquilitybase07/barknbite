@@ -1,0 +1,229 @@
+<% extend('layout') %>
+<header class="page-header-wrapper">
+    <div class="container">
+        <div class="page-header">
+            <div class="breadcrumbs-wrapper">
+                <div class="breadcrumbs">
+                    <a href="http://soho-classic-demo.mybigcommerce.com/">Home</a> <span class="divider">/</span>
+                    <span class="breadcrumbs-current">
+                        Create Account
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+
+    <section class="account-wrapper account-page-create account-nav-hidden">
+
+
+
+        <div class="account-body">
+            <div class="account-header">
+                <h1 class="account-heading"> Create Account
+                </h1>
+
+                <div class="account-toolbar"></div>
+            </div>
+
+
+            <div class="account-content">
+
+                <form class="account-create-form form" method="post">
+                    <div class="account-create-details">
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_1">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Email Address
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_1" name="email" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-password  form-required" id="FormField_2">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Password
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="password-FormField_2" name="pass1" type="password">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-password  form-required" id="FormField_3">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Confirm Password
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="password-FormField_3" name="pass2" type="password">
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="account-create-address">
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_4">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    First Name
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_4" name="fname" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_5">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Last Name
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_5" name="lname" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text " id="FormField_6">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Company Name
+
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_6" name="FormField[2][6]" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_7">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Phone Number
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_7" name="pno" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_8">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Address Line 1
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_8" name="add1" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text " id="FormField_9">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Address Line 2
+
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_9" name="add2" type="text">
+                                </span>
+                            </label>
+                        </div>
+
+
+
+                        <div class="form-field form-field-common form-field-select  form-required" id="FormField_11">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Country
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <span class="form-select-wrapper">
+                                        <select class="form-input form-select" id="select-FormField_11" name="cont">
+
+
+                                            <option value="India">India</option>
+
+                                        </select>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-field form-field-common form-field-selectortext  form-required" id="FormField_12">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    State/Province
+                                    <span class="required-text">*</span>
+                                </span>
+
+                                <span class="form-field-control">
+                                    <noscript>
+                                        <input class="form-input" id="input-FormField_12" name="FormField[2][12]" type="text"
+                                            value="">
+                                    </noscript>
+
+                                    <div class="form-select-wrapper">
+                                        <select class="form-input form-select" id="select-FormField_12" name="state">
+
+                                            <option value="delhi">Delhi</option>
+
+                                        </select>
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+
+
+                        <div class="form-field form-field-common form-field-text  form-required" id="FormField_13">
+                            <label class="form-label">
+                                <span class="form-field-title">
+                                    Zip/Postcode
+                                    <span class="required-text">*</span>
+                                </span>
+                                <span class="form-field-control">
+                                    <input class="form-input" id="input-FormField_13" name="pin" type="text"
+                                        placeholder="">
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="account-create-form-actions">
+                        <input class="button account-button-primary" type="submit" value="Create Account">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+</div>

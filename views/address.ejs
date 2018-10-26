@@ -1,0 +1,47 @@
+<% extend('layout2') %>
+<div class="account-body">
+    <div class="account-header">
+        <h1 class="account-heading"> Addresses
+        </h1>
+
+        <div class="account-toolbar">
+            <!-- <a class="account-tool" href="/account.php?action=add_shipping_address">
+                New Address
+            </a> -->
+        </div>
+    </div>
+
+
+    <div class="account-content">
+
+        <div class="account-items">
+            <article class="account-item">
+                <div class="account-item-body">
+                    <h1 class="account-item-title account-item-title-large">
+                        <%= add.fname %>
+                        <%= add.lname %>
+                    </h1>
+
+                    <div class="account-item-details">
+                        <span class="account-address-detail">Bark</span>
+                        <span class="account-address-detail">
+                            <%= add.add1 %></span>
+                        <span class="account-address-detail"></span>
+                        <span class="account-address-detail">
+                            <% add.add2 %></span>
+                        <span class="account-address-detail">Phone:
+                            <%= add.pno %></span>
+                    </div>
+                </div>
+                <div class="account-item-actions">
+                    <form class="form" action="/account.php?action=delete_shipping_address&amp;address_id=2&amp;from=account.php%3Faction%3Daddress_book"
+                        method="post">
+                        <a class="button account-button-primary account-button-small" href="/update-address/oup">Edit</a>
+                        <!-- <button type="submit" class="button account-button-primary account-button-small">Delete</button> -->
+                    </form>
+                </div>
+            </article>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bark N Bite - Admin</title>
+    <link rel="stylesheet" href="/css/uikit.css">
+    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div style="padding:40px;">
+        <%- messages('message', locals) %>
+        <a href="/admin/xyz/sandeep/barknbite/@1234/5678/">Back To Menu</a>&nbsp;&nbsp;&nbsp;<a href="/admin/xyz/sandeep/barknbite/@1234/5678/product">View
+            Product</a>
+        <br>
+
+        <form method="POST" enctype="multipart/form-data">
+            <fieldset class="uk-fieldset">
+
+                <legend class="uk-legend">Add Product</legend>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="name" id="" placeholder="Name of product">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="cat" id="" placeholder="Product Category">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="price" id="" placeholder="Price of product">
+                </div>
+                <div class="uk-margin">
+                    Select a file: <input type="file" name="imgpro">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="stock" id="" placeholder="Stock">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="brand" id="" placeholder="Brand">
+                </div>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Product Description" name="desp"></textarea>
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-button uk-button-secondary" type="submit" value="Update">
+                </div>
+
+
+
+            </fieldset>
+        </form>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bark N Bite - Add Product</title>
+</head>
+
+<body>
+
+    <form action="/add/product" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" id="" placeholder="Name of product">
+        <br>
+        <input type="text" name="cat" id="" placeholder="Product Category">
+        <br>
+        <input type="text" name="price" id="" placeholder="Price of product">
+        <br>
+        Select a file: <input type="file" name="imgpro">
+        <br>
+        <input type="text" name="stock" id="" placeholder="Stock">
+        <br>
+        <input type="text" name="brand" id="" placeholder="Brand">
+        <br>
+        <textarea name="desp" id="" cols="30" rows="10" placeholder="Product Description"></textarea>
+        <br>
+        <input type="submit" value="Add Product">
+        <br>
+
+
+
+
+    </form>
+</body>
+
+</html> -->

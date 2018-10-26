@@ -1,0 +1,122 @@
+<% extend('layout2') %>
+
+<div class="account-body">
+    <div class="account-header">
+        <h1 class="account-heading"> Account Settings
+        </h1>
+
+        <div class="account-toolbar"></div>
+    </div>
+
+
+    <div class="account-content">
+
+
+        <form class="account-settings-form" method="post">
+
+            <div class="form-field form-field-common form-field-text  form-required" id="">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        First Name
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-" name="account_firstname" type="text" placeholder="" value="<%= add.fname %>"
+                            required aria-required="true" disabled>
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-field form-field-common form-field-text  form-required" id="">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Last Name
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-" name="account_lastname" type="text" placeholder="" value="<%= add.lname %>"
+                            required aria-required="true" disabled>
+                    </span>
+                </label>
+            </div>
+
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Phone Number
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-" name="account_phone" type="text" placeholder="" value="<%= add.pno %>"
+                            required aria-required="true" disabled>
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_1">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Email Address
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_1" name="FormField[1][1]" type="text" placeholder=""
+                            value="<%= add.email %>" data-field-type="EmailAddress" required aria-required="true"
+                            disabled>
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-password " id="FormField_2">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        New Password
+
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="password-FormField_2" name="newpass1" type="password" placeholder=""
+                            data-field-type="Password" aria-required="false">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-password " id="FormField_3">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Confirm New Password
+
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="password-FormField_3" name="newpass2" type="password" placeholder=""
+                            data-field-type="ConfirmPassword" aria-required="false">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-password " id="FormField_24">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Current Password
+
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="password-FormField_24" name="currpass" type="password"
+                            placeholder="" data-field-type="CurrentPassword" aria-required="false">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-actions">
+                <button class="button account-button-primary">Update Details</button>
+            </div>
+        </form>
+
+    </div>
+</div>

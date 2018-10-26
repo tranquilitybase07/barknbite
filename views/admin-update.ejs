@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bark N Bite - Admin</title>
+    <link rel="stylesheet" href="/css/uikit.css">
+    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div style="padding:40px;">
+        <%- messages('message', locals) %>
+        <a href="/admin/xyz/sandeep/barknbite/@1234/5678/product">Back To Products</a>
+        <br>
+        <form method="POST">
+            <fieldset class="uk-fieldset">
+
+                <legend class="uk-legend">Edit Product</legend>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="name" placeholder="Name" value="<%= allpro.name %>">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="price" placeholder="Price" value="<%= allpro.price %>">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="brand" placeholder="Brand" value="<%= allpro.brand %>">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" name="cat" placeholder="Category" value="<%= allpro.cat %>">
+                </div>
+
+                <div class="uk-margin">
+                    <input class="uk-button uk-button-secondary" type="submit" value="Update">
+                </div>
+
+
+
+            </fieldset>
+        </form>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

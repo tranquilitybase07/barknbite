@@ -1,0 +1,75 @@
+<% extend('layout2') %>
+<div class="account-body">
+    <div class="account-header">
+        <h1 class="account-heading"> Orders
+        </h1>
+
+        <div class="account-toolbar"></div>
+    </div>
+
+
+    <div class="account-content">
+
+        <% for(var i=0; i < order.length; i++) { %>
+
+        <div class="uk-card uk-card-default uk-width-1-1@m" style="margin-top:40px; margin-bottom: 40px;">
+            <div class="uk-card-header">
+
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">
+                            Order Id :
+                            <%= order[i].oid %>
+                        </h3>
+                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">
+                                <%= order[i].date %></time></p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div class="account-items">
+                    <h3 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px;">Your Item</h3>
+                    <ul class="uk-list">
+                        <% for(var j=0; j < order[i].proid.length; j++) { %>
+                        <li><a href="/product/<%= order[i].proid[j] %>">
+                                <%= order[i].name[j] %> (x
+                                <%= order[i].qty[j] %>)</a> </li>
+
+                        <% } %>
+                        <br>
+                        <br>
+                        <li><a href="/help">CANCEL ORDER </a>&nbsp;&nbsp; <a href="/help">HELP ?</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="uk-card-footer">
+                <% if(order[i].stat == 0) { %>
+                <a href="#" class="uk-button uk-button-text">order status : pending</a>
+                <% } else { %>
+                <a href="#" class="uk-button uk-button-text">order status : delivered</a>
+                <% } %>
+                <a href="#" class="uk-button uk-button-text uk-align-right" style="font-size:20px">&#8377;
+                    <%= order[i].total %></a>
+            </div>
+        </div>
+        <% } %>
+        <!-- <div class="account-empty">You haven&#x27;t placed any orders yet.</div> -->
+
+        <div class="pagination">
+
+            <div class="pagination-count">
+                <strong class="pagination-current">
+                    1
+                </strong>
+                <span class="pagination-of">of</span>
+                <span class="pagination-total">
+                    1
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+</div>

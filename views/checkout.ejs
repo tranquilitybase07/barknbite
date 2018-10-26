@@ -1,0 +1,91 @@
+<% extend('layout') %>
+<div class="uk-card uk-card-default uk-width-1-2@m" style="margin : 0 auto; margin-top:40px; margin-bottom: 40px;">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="img/man.png">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">
+                    <%= user.fname %>
+                    <%= user.lname %>
+                </h3>
+                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <h3 class="uk-card-title uk-margin-remove-bottom">Your Address</h3>
+        <div class="account-items">
+            <article class="account-item" style="border:none">
+                <div class="account-item-body">
+                    <h1 class="account-item-title account-item-title-large">
+                        <%= add.fname %>
+                        <%= add.lname %>
+                    </h1>
+
+                    <div class="account-item-details">
+
+                        <span class="account-address-detail">
+                            <%= add.add1 %></span>
+                        <span class="account-address-detail"></span>
+                        <span class="account-address-detail">
+                            <%= add.add2 %></span>
+                        <span class="account-address-detail">
+                            <%= add.pin %></span>
+                        <span class="account-address-detail">Phone:
+                            <%= add.pno %></span>
+                    </div>
+                </div>
+                <div class="account-item-actions">
+                    <form class="form" action="/account.php?action=delete_shipping_address&amp;address_id=2&amp;from=account.php%3Faction%3Daddress_book"
+                        method="post">
+                        <a class="button account-button-primary account-button-small" href="/update-address/chk">Edit</a>
+                        <!-- <button type="submit" class="button account-button-primary account-button-small">Delete</button> -->
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="account-items">
+            <h3 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px;">Your Item</h3>
+            <ul class="uk-list">
+                <% for(var i=0; i < cart.length; i++) { %>
+                <li>
+                    <%= cart[i].name %> &nbsp; (x
+                    <%= cart[i].qty %>)</li>
+                <% } %>
+
+                <li>
+                    <% if(cop == 1) { %>
+
+                    Coupon Applied succesfully &nbsp; <img src="img/checked.png" alt="check" height="20" width="20">
+                    <% } %>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="uk-card-footer">
+        <label for="plor" href="#" class="uk-button uk-button-text">Place Order</label>
+        <a href="#" class="uk-button uk-button-text uk-align-right" style="font-size:20px">&#8377;
+            <%= total %></a>
+    </div>
+</div>
+<form action="/place/order" method="post">
+    <% for(var i=0; i < cart.length; i++) { %>
+    <input type="hidden" name="name" value="<%= cart[i].name %>">
+    <% } %>
+    <% for(var i=0; i < cart.length; i++) { %>
+    <input type="hidden" name="proid" value="<%= cart[i].proid %>">
+    <% } %>
+    <% for(var i=0; i < cart.length; i++) { %>
+    <input type="hidden" name="qty" value="<%= cart[i].qty %>">
+    <% } %>
+    <input type="hidden" name="total" value="<%= total %>">
+    <input type="hidden" name="add1" value="<%= add.add1 %>">
+    <input type="hidden" name="add2" value="<%= add.add2 %>">
+    <input type="hidden" name="pno" value="<%= add.pno %>">
+    <input type="hidden" name="fname" value="<%= add.fname %>">
+    <input type="hidden" name="lname" value="<%= add.lname %>">
+    <input type="submit" id="plor" value="Submit" style="display:none">
+</form>

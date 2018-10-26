@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+body a {
+  text-decoration: none;
+  border: none;
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+.padd {
+  padding: 20px 25px;
+}
+.nomar {
+  margin-top: -14px;
+}
+.bribot {
+  top: 226px;
+  right: 20px;
+}
+.cart-bot {
+  padding: 0px;
+}
+.cart-pad {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  box-shadow: none;
+  height: 120px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #web-nav {
+    display: none;
+  }
+  #mob-nav {
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #web-nav {
+    display: none;
+  }
+  #mob-nav {
+    display: block;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #web-nav {
+    display: none;
+  }
+  #mob-nav {
+    display: block;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #web-nav {
+    display: flex;
+  }
+  #mob-nav {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #web-nav {
+    display: flex;
+  }
+  #mob-nav {
+    display: none;
+  }
+}

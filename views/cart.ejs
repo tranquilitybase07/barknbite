@@ -1,0 +1,149 @@
+<% extend('layout') %>
+<div id="modal-discount" style="top:100px;" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Apply Coupon</h2>
+        <form class="form" method="POST" action="/dis/cart">
+            <div class="form-field">
+                <label class="form-label" for="couponcode">
+                    <span class="form-label-text show-for-sr">Enter Your Coupon Code</span>
+                    <input class="form-input" id="couponcode" type="text" name="disc" value="" placeholder="Enter Your Coupon Code">
+                </label>
+            </div>
+            <div class="form-actions">
+                <input class="button" type="submit" value="Apply">
+                <input type="hidden" name="action" value="applycoupon">
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div class="main-content-wrapper" data-main-content-wrapper>
+    <header class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header">
+                <div class="breadcrumbs-wrapper">
+                    <div class="breadcrumbs">
+                        <a href="/">Home</a> <span class="divider">/</span>
+                        <span class="breadcrumbs-current">
+                            Your Cart
+                        </span>
+                    </div>
+                </div>
+
+                <h1 class="page-title">Your Cart</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <br>
+        <div class="main-content">
+            <div class="cart-content" data-cart-content>
+                <div data-cart-errors></div>
+                <% for(var i=0; i < cart.length; i++) { %>
+                <article class="cart-item" data-cart-item data-item-id="6123000a-1b1c-4780-a195-5c81add5686a">
+                    <div class="cart-item-image-wrapper">
+                        <figure class="cart-item-image">
+                            <a href="/product/<%= cart[i].proid %>">
+                                <img src="/img/<%= cart[i].img %>" alt="Santorini Collar">
+                            </a>
+                            <!-- <a class="cart-item-remove" href="/cart.php?action=remove&amp;item=6123000a-1b1c-4780-a195-5c81add5686a"
+                                data-cart-item-remove>
+                                <svg>
+                                    <use xlink:href="#icon-close">
+                                </svg>
+                            </a> -->
+                            <form class="form account-product-item-remove" action="/cart/del/<%= cart[i]._id %>" method="post">
+                                <input type="submit" value="&times;">
+                            </form>
+                        </figure>
+                    </div>
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-brand">
+                            <%= cart[i].cat %>
+                        </h4>
+
+                        <h3 class="cart-item-title">
+                            <a href="/product/<%= cart[i].proid %>">
+                                <%= cart[i].name %> (x
+                                <%= cart[i].qty %>)</a>
+                        </h3>
+                        <!-- <p class="cart-item-price "><%= cart[i].proid %></p> -->
+                        <h4 class="cart-item-brand">price :
+                            &#8377;
+                            <%= cart[i].price %>
+                        </h4>
+                        <h4 class="cart-item-brand">Total :
+                            &#8377;
+                            <%= cart[i].total %>
+                        </h4>
+                    </div>
+                </article>
+                <% } %>
+                <!-- snippet location cart -->
+            </div>
+
+            <div class="cart-totals-wrapper">
+                <div class="cart-totals" data-cart-totals>
+
+
+
+                    <div class="cart-total-item cart-subtotal">
+                        <span class="cart-total-item-label">Subtotal</span>
+                        <span class="cart-total-item-value">
+                            &#8377;
+                            <%= sum %></span>
+                    </div>
+
+
+
+
+
+
+                    <div class="cart-total-item cart-coupon" data-coupon-codes>
+                        <span class="cart-total-item-label">Coupon Code</span>
+                        <button class="cart-total-item-button" type="button" uk-toggle="target: #modal-discount">Add
+                            Code</button>
+
+                        <!-- <form class="cart-coupon-form form" method="get" action="/cart/dis">
+                            <div class="form-field">
+                                <label class="form-label" for="couponcode">
+                                    <span class="form-label-text show-for-sr">Enter Your Coupon Code</span>
+                                    <input class="form-input" id="couponcode" type="text" name="couponcode" value=""
+                                        placeholder="Enter Your Coupon Code">
+                                </label>
+                            </div>
+                            <div class="form-actions">
+                                <input class="button" type="submit" value="Apply">
+                                <input type="hidden" name="action" value="applycoupon">
+                            </div>
+                        </form> -->
+                    </div>
+
+                    <div class="cart-total">
+                        <span class="cart-total-label">Total Amount</span>
+                        <span class="cart-total-value"> &#8377;
+                            <%= total %></span>
+                    </div>
+                    <form action="/checkout" method="post">
+                        <input type="hidden" name="cop" value="<%= cop %>">
+                        <input type="hidden" name="total" value="<%= total %>">
+                        <input type="submit" value="" style="display:none" id="chkout">
+                    </form>
+
+                    <div class="cart-buttons-wrapper">
+                        <div class="cart-buttons">
+                            <button class="cart-update button secondary" type="button" data-cart-update>Update Bag</button>
+                            <label for="chkout" class="cart-checkout button" href="/checkout.php">Check Out</label>
+                        </div>
+
+                        <div class="cart-additional-checkout-buttons">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

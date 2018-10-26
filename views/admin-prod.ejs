@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bark N Bite - Admin</title>
+    <link rel="stylesheet" href="/css/uikit.css">
+    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div style="padding:40px;">
+        <%- messages('message', locals) %>
+        <a href="/admin/xyz/sandeep/barknbite/@1234/5678">Back To Menu</a>
+        <br>
+        <ul class="uk-list">
+            <% for(var i=0; i < allpro.length; i++) { %>
+            <li><a href="/product/<%= allpro[i]._id %>">
+                    <%= allpro[i].name %></a>&nbsp; <a href="#">
+                    <%= allpro[i].price %></a> <a href="/admin/xyz/sandeep/barknbite/@1234/5678/edit/<%= allpro[i]._id %>"
+                    class="uk-align-right">Edit</a>&nbsp;<a href="/admin/xyz/sandeep/barknbite/@1234/5678/del/product/<%= allpro[i]._id %>"
+                    class="uk-align-right" id="delbt">Delete</a></li>
+            <% } %>
+
+        </ul>
+
+    </div>
+    <script>
+        var bt = document.getElementById('delbt');
+        bt.addEventListener('click', prop);
+        function prop(e) {
+
+            if (confirm('Are You Sure ?? ')) {
+                bt.href = bt.href;
+            }
+            else {
+                bt.href = '/admin/xyz/sandeep/barknbite/@1234/5678/product';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<% extend('layout2') %>
+<div class="account-body">
+    <div class="account-header">
+        <h1 class="account-heading"> Wishlist
+        </h1>
+
+        <div class="account-toolbar"></div>
+    </div>
+
+
+    <div class="account-content">
+
+        <section class="account-wishlist ">
+            <h2 class="account-sub-heading">Wishlist Contents</h2>
+
+            <div class="account-wishlist-items account-product-wrapper ">
+
+
+                <% for(var i=0; i < wish.length; i++) { %>
+                <article class="account-product-item">
+                    <figure class="account-product-item-thumbnail">
+                        <a href="/product/<%= wish[i].proid %>" title="Tell Me Your Dreams Dog Bed">
+                            <img src="img/<%= wish[i].img %>" alt="">
+                        </a>
+                        <form class="form account-product-item-remove" action="/wishlist/del/<%= wish[i]._id %>" method="post">
+                            <input type="submit" value="&times;">
+                        </form>
+                    </figure>
+                    <div class="account-product-item-details">
+                        <h3 class="account-product-item-title">
+                            <a href="/product/<%= wish[i].proid %>" title="Tell Me Your Dreams Dog Bed">
+                                <%= wish[i].name %></a>
+                        </h3>
+                        <span class="account-product-item-brand">
+                            <a href="">Beast + Babe</a>
+                        </span>
+                        <div class="account-product-item-price">
+                            <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <span class="price-withouttax" data-price="without-tax">
+                                    <span class="price-value" data-price-value="without-tax">
+
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <% } %>
+
+            </div>
+        </section>
+
+    </div>
+</div>

@@ -1,0 +1,162 @@
+<% extend('layout') %>
+<div class="main-content-wrapper" data-main-content-wrapper>
+    <header class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header">
+                <div class="breadcrumbs-wrapper">
+                    <div class="breadcrumbs">
+                        <a href="http://soho-classic-demo.mybigcommerce.com/">Home</a> <span class="divider">/</span>
+                        <span class="breadcrumbs-current">
+                            <%= type %>
+                        </span>
+                    </div>
+                </div>
+
+                <h1 class="page-title">
+                    <%= type %>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="main-content">
+
+            <main class="product-listing " data-category data-product-item-container>
+                <!-- snippet location categories -->
+                <header class="product-listing-header view-grid">
+                    <br>
+                    <div class="product-listing-sort-module">
+                        <span class="product-listing-sort-module-label">Sort:</span>
+
+                        <form class="form product-listing-sort-module-form" method="get">
+                            <label class="form-label form-select-wrapper" for="sort">
+                                <select class="form-select" name="sort" id="sort">
+
+                                    <option value="featured" selected>Featured</option>
+                                    <option value="newest">Newest</option>
+                                    <option value="bestselling">Popular</option>
+                                    <option value="alphaasc">A-Z</option>
+                                    <option value="alphadesc">Z-A</option>
+                                    <option value="avgcustomerreview">Rating</option>
+                                    <option value="priceasc">Price Low to High</option>
+                                    <option value="pricedesc">Price High to Low</option>
+                                </select>
+                            </label>
+                        </form>
+                    </div>
+
+                    <!-- <div class="product-listing-sort-module product-listing-view" data-product-listing-view>
+                        <button class="product-listing-view-toggle view-grid" data-product-listing-view-grid>
+                            <svg class="product-listing-view-toggle-icon">
+                                <use xlink:href="#icon-view-grid">
+                            </svg>
+                        </button>
+
+                        <button class="product-listing-view-toggle view-list" data-product-listing-view-list>
+                            <svg class="product-listing-view-toggle-icon">
+                                <use xlink:href="#icon-menu">
+                            </svg>
+                        </button>
+                    </div> -->
+
+                </header>
+                <div class="related-products-items">
+                    <div class="uk-child-width-1-4@m" uk-grid>
+                        <% ls.forEach(function(lsp){ %>
+                        <div>
+                            <a href="/product/<%= lsp._id %>">
+                                <div class="uk-card uk-card-default uk-width-1-1@m">
+                                    <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                    <div class="uk-card-media-top">
+                                        <img src="../img/dog.jpg" alt="">
+                                    </div>
+                                    <div class="uk-card-body padd">
+                                        <h3 class="uk-card-title" style="font-size:14px;">
+                                            <%= lsp.name %>
+                                        </h3>
+                                        <h4 class="nomar">&#8377;&nbsp;
+                                            <%= lsp.price %>
+                                        </h4>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% }); %>
+                        <div>
+                            <div class="uk-card uk-card-default uk-width-1-1@m">
+                                <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                <div class="uk-card-media-top">
+                                    <img src="../img/dog1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body padd">
+                                    <h3 class="uk-card-title" style="font-size:14px;">Royal Canin 5kg - Red Cherry</h3>
+                                    <h4 class="nomar">&#8377;&nbsp; 570</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-width-1-1@m">
+                                <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                <div class="uk-card-media-top">
+                                    <img src="../img/dog2.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body padd">
+                                    <h3 class="uk-card-title" style="font-size:14px;">Royal Canin 5kg - Red Cherry</h3>
+                                    <h4 class="nomar">&#8377;&nbsp; 570</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-width-1-1@m">
+                                <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                <div class="uk-card-media-top">
+                                    <img src="../img/dog2.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body padd">
+                                    <h3 class="uk-card-title" style="font-size:14px;">Royal Canin 5kg - Red Cherry</h3>
+                                    <h4 class="nomar">&#8377;&nbsp; 570</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-width-1-1@m">
+                                <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                <div class="uk-card-media-top">
+                                    <img src="../img/dog2.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body padd">
+                                    <h3 class="uk-card-title" style="font-size:14px;">Royal Canin 5kg - Red Cherry</h3>
+                                    <h4 class="nomar">&#8377;&nbsp; 570</h4>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div>
+                            <div class="uk-card uk-card-default uk-width-1-1@m">
+                                <div class="uk-card-badge bribot"><span class="uk-margin-small-right" uk-icon="heart"></span></div>
+                                <div class="uk-card-media-top">
+                                    <img src="../img/dog.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body padd">
+                                    <h3 class="uk-card-title" style="font-size:14px;">Royal Canin 5kg - Red Cherry</h3>
+                                    <h4 class="nomar">&#8377;&nbsp; 570</h4>
+
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+</div>

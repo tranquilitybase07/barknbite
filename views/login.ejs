@@ -1,0 +1,87 @@
+<% extend('layout') %>
+
+<header class="page-header-wrapper" style="border:none;">
+    <div class="container">
+        <div class="page-header">
+            <div class="breadcrumbs-wrapper">
+                <div class="breadcrumbs">
+                    <a href="http://soho-classic-demo.mybigcommerce.com/">Home</a> <span class="divider">/</span>
+                    <span class="breadcrumbs-current">
+                        Login
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="account-wrapper account-page-login account-nav-hidden">
+
+
+
+        <div class="account-body">
+
+
+            <div class="account-content">
+
+
+                <div class="account-login-wrapper">
+                    <div class="account-login">
+                        <h2 class="account-sub-heading">Log in</h2>
+
+                        <form class="account-login-form form" method="post">
+
+                            <div class="form-field form-field-common form-field-email  form-required" id="login_email">
+                                <label class="form-label">
+                                    <span class="form-field-title">
+                                        Email Address
+                                        <span class="required-text">*</span>
+                                    </span>
+                                    <span class="form-field-control">
+                                        <input class="form-input" id="input-login_email" name="username" type="email">
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-field form-field-common form-field-password  form-required" id="login_pass">
+                                <label class="form-label">
+                                    <span class="form-field-title">
+                                        Password
+                                        <span class="required-text">*</span>
+                                    </span>
+                                    <span class="form-field-control">
+                                        <input class="form-input" id="password-login_pass" name="password" type="password">
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <input type="submit" class="button account-button-primary account-login-button" value="Log In">
+                                <a class="account-forgot-password-link" href="/login.php?action=reset_password">Forgot
+                                    password?</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="account-create">
+                        <h2 class="account-sub-heading">New Customer</h2>
+                        <p class="account-create-intro">Create an account with us and you&#x27;ll be able to:</p>
+                        <ul class="account-create-facts">
+                            <li>Check out faster</li>
+                            <li>Save multiple shipping addresses</li>
+                            <li>Access your order history</li>
+                            <li>Track new orders</li>
+                            <li>Save items to your wish list</li>
+                        </ul>
+                        <a class="button account-button-primary" href="/login.php?action=create_account">Create
+                            Account</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>

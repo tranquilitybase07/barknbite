@@ -1,0 +1,121 @@
+<% extend('layout2') %>
+<div class="account-body">
+    <div class="account-header">
+        <h1 class="account-heading"> Edit Address
+        </h1>
+
+        <div class="account-toolbar"></div>
+    </div>
+
+
+    <div class="account-content">
+
+        <form class="form account-address-form" id="address-form" method="post">
+            <input type="hidden" name="shipid" value="2">
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_4">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        First Name
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_4" name="fname" type="text" placeholder="" value="<%= add.fname %>"
+                            data-field-type="FirstName" required aria-required="true">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_5">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Last Name
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_5" name="lname" type="text" placeholder="" value="<%= add.lname %>"
+                            data-field-type="LastName" required aria-required="true">
+                    </span>
+                </label>
+            </div>
+
+
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_7">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Phone Number
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_7" name="pno" type="text" placeholder="" value="<%= add.pno %>"
+                            data-field-type="Phone" required aria-required="true">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_8">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Address Line 1
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_8" name="add1" type="text" placeholder="" value="<%= add.add1 %>"
+                            data-field-type="AddressLine1" required aria-required="true">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-text " id="FormField_9">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Address Line 2
+
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_9" name="add2" type="text" value="<%= add.add2 %>"
+                            placeholder="" data-field-type="AddressLine2" aria-required="false">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_10">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Suburb/City
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_10" name="state" type="text" placeholder="" value="<%= add.state %>"
+                            data-field-type="City" required aria-required="true" disabled> </span> </label> </div>
+            <div class="form-field form-field-common form-field-text  form-required" id="FormField_13">
+                <label class="form-label">
+                    <span class="form-field-title">
+                        Zip/Postcode
+                        <span class="required-text">*</span>
+                    </span>
+                    <span class="form-field-control">
+                        <input class="form-input" id="input-FormField_13" name="pin" type="text" placeholder="" value="<%= add.pin %>"
+                            data-field-type="Zip" required aria-required="true">
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="form-actions">
+                <input type="submit" class="button account-button-primary" value="Save Address">
+                <a href="/address" class="button account-button-secondary">Cancel</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+</section>
+</div>
